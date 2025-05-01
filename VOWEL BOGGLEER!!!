@@ -1,0 +1,11 @@
+def number_of_vowels(s):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in s:
+        if char in vowels:
+            count += 1
+    return count
+
+def is_valid_pal(s):
+    cleaned = ''.join([char.lower() for char in s if char.isalpha()])
+    return cleaned == cleaned[::-1]
